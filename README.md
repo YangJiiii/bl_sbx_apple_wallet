@@ -38,6 +38,17 @@ If you need to obtain specific Wallet IDs, follow these steps:
 
 ![3uTools Path Example](images/3u.png)
 
+
+## Customizing Card Images
+
+To change the background image of a card, follow these steps:
+
+1.  Navigate to the specific Cards folder.
+2.  Locate the file named: `cardBackgroundCombined@2x.png`
+3.  **Replace this file** with the image you want to use.
+    * *Note: Ensure your new image file is renamed exactly to `cardBackgroundCombined@2x.png`.*
+
+
 ## Installation
 
 Open your terminal and install the required Python dependencies using one of the following commands:

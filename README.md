@@ -22,8 +22,6 @@ Before running the script, please ensure all the following requirements are met:
     * Connect the iPhone to the computer via **USB cable**.
     * *(Optional: Verify the connection status using tools like 3uTools or Finder).*
 
-![Device Connection Setup](path/to/connection_image.png)
-
 ## Retrieving Wallet/Card IDs
 
 If you need to obtain specific Wallet IDs, follow these steps:
@@ -38,7 +36,7 @@ If you need to obtain specific Wallet IDs, follow these steps:
     To confirm which card belongs to which issuer (by viewing the issuer's icon/logo), navigate to:
     `/HomeDomain/Library/Passes/Cards/NotificationAssets`
 
-![3uTools Path Example](path/images/3u.png)
+![3uTools Path Example](images/3u.png)
 
 ## Installation
 

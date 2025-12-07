@@ -44,17 +44,17 @@ Open your terminal and install the required Python dependencies using one of the
 
 ```bash
 sudo pip install click requests packaging pymobiledevice3
+```
+
 Or, if you use pip3:
 
-Bash
-
+```bash
 sudo pip3 install click requests packaging pymobiledevice3
-Usage
-Run the main script using administrator privileges (sudo). Replace the path below with the actual location of your script:
-
-Bash
-
+```
+Usage Run the main script using administrator privileges (sudo). Replace the path below with the actual location of your script:
+```bash
 sudo python3 path/to/your/script/main.py
+```
 Troubleshooting
 General Errors: If you encounter issues, delete the uuid.txt file generated in the script's folder. Then, restart your iPhone and try the process again.
 

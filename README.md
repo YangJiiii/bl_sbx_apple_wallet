@@ -1,4 +1,4 @@
-# iOS Wallet Manager Pro (GUI Version)
+# iOS Wallet Manager Pro (GUI Version) - Support iOS 18.2-26.1
 
 A professional Python-based tool with a **Graphical User Interface (GUI)** to customize Apple Wallet passes/cards on iOS devices using the **Books Exploit**.
 

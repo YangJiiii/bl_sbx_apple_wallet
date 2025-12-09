@@ -60,9 +60,8 @@ python3 path/to/main.py
 ## 🖥️ On the Interface
 
 ### **Step 1 — Scan ID**
-- Remove the card from Apple Wallet if already added  
 - Click **SCAN CARD ID**  
-- Add the card to your Wallet  
+- Then set your card as the **Default card**
 - The tool will automatically detect and display the Card ID  
 
 ### **Step 2 — Save**

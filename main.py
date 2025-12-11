@@ -140,6 +140,47 @@ LANGUAGES = {
         "cred_dev": "开发者",
         "cred_log": "Wallet ID 日志漏洞",
         "cred_sbx": "bl_sbx 漏洞"
+    },
+    "KR": {
+        "title": "지갑 카드 관리",
+        "device_prefix": "디바이스:",
+        "status_connected": "연결됨",
+        "status_disconnected": "연결 끊김",
+        "sec1_title": "1. 카드 ID 관리",
+        "btn_scan": "카드 ID 스캔",
+        "btn_scan_wait": "카드를 기다리는 중...",
+        "ph_id": "카드 ID (Hash)…",
+        "ph_name": "식별용 이름 입력…",
+        "btn_save": "저장",
+        "btn_del": "삭제",
+        "col_name": "카드 이름",
+        "col_id": "ID",
+        "sec2_title": "2. 이미지 & 미리보기",
+        "btn_img": "배경 이미지 선택",
+        "lbl_no_img": "선택된 이미지 없음",
+        "btn_run": "실행 (Inject)",
+        "btn_info": "정보",
+        "btn_donate": "기부",
+        "ready": "준비 완료",
+        "msg_done": "완료되었습니다.",
+        "msg_success": "카드가 성공적으로 변경되었습니다.\niPhone 지갑앱을 확인하십시오.",
+        "err_no_card_folder": "Cards 폴더를 찾을 수 없습니다.",
+        "err_no_connect": "디바이스가 연결되지 않았습니다.",
+        "confirm_del": "정말로 이 카드를 삭제하시겠습니까?",
+        "p_init": "연결 초기화 중...",
+        "p_img": "배경 이미지 적용 중...",
+        "p_front": "FrontFace 설치 중...",
+        "p_holder": "PlaceHolder 설치 중...",
+        "p_preview": "Preview 설치 중...",
+        "p_respring": "리스프링중...",
+        "p_done": "처리가 완료되었습니다.",
+        "info_title": "프로젝트 정보",
+        "uuid_title": "도서 다운로드 필요",
+        "uuid_msg": "도서 앱의 UUID를 찾을 수 없습니다.\n\n👉 iPhone에서 '도서' 앱을 열고 아무 책이나 다운로드하십시오.\n\n다운로드가 완료되면 프로그램이 자동으로 다음스텝을 계속 진행합니다.",
+        # Credits Text
+        "cred_dev": "개발자",
+        "cred_log": "Wallet ID 로그 분석",
+        "cred_sbx": "bl_sbx 분석"
     }
 }
 
@@ -264,7 +305,7 @@ class AppWindow(QMainWindow):
         self.lbl_title.setObjectName("AppTitle")
         
         self.combo_lang = QComboBox()
-        self.combo_lang.addItems(["Tiếng Việt", "English", "中文"])
+        self.combo_lang.addItems(["Tiếng Việt", "English", "中文", "한국어"])
         self.combo_lang.setFixedWidth(100)
         self.combo_lang.currentIndexChanged.connect(self.change_language)
         
@@ -438,6 +479,7 @@ class AppWindow(QMainWindow):
         if index == 0: self.current_lang = "VN"
         elif index == 1: self.current_lang = "EN"
         elif index == 2: self.current_lang = "CN"
+        elif index == 3: self.current_lang = "KR"
         self.retranslate_ui()
         self.check_connection() 
 

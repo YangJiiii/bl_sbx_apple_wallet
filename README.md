@@ -83,9 +83,3 @@ Click **EXECUTE (INJECT)** to begin the modification process.
   - Open the **Books** app → download any book  
   - The tool will automatically detect this and **resume**  
 - Your device will automatically **respring** when finished  
-
----
-
-## ☕ Support  
-If this project helped you, consider supporting via **Ko-fi** ❤️  
-👉 https://ko-fi.com/yangjiii/goal?g=1

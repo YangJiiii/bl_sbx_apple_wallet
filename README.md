@@ -2,8 +2,9 @@
 
 A professional Python-based tool with a **Graphical User Interface (GUI)** to customize Apple Wallet passes/cards on iOS devices using the **Books Exploit**.
 
-> ⚠️ **IMPORTANT NOTE:**  
-> This modification is **non-persistent** — changes will revert after a reboot.  
+> ⚠️ **IMPORTANT NOTE:** > This modification is **non-persistent** on most devices — changes will revert after a reboot.  
+> **Note:** Persistence may vary depending on the device model and iOS version; on some devices, the modification might not stay at all after a restart.
+>
 > **Use at your own risk.**
 
 ---

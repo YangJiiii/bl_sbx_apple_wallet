@@ -181,6 +181,46 @@ LANGUAGES = {
         "cred_log": "Exploit Wallet ID Logs",
         "cred_sbx": "Exploit bl_sbx"
     },
+    "KR": {
+        "title": "월렛 관리자",
+        "device_prefix": "장치:",
+        "status_connected": "연결됨",
+        "status_disconnected": "연결 끊김",
+        "sec1_title": "1. 카드 ID 관리",
+        "btn_scan": "카드 ID 스캔",
+        "btn_scan_wait": "카드 대기 중...",
+        "ph_id": "카드 ID (해시)...",
+        "ph_name": "별칭 입력...",
+        "btn_save": "저장",
+        "btn_del": "삭제",
+        "col_name": "카드 이름",
+        "col_id": "ID",
+        "sec2_title": "2. 이미지 및 미리보기",
+        "btn_img": "이미지 선택",
+        "lbl_no_img": "선택된 이미지 없음",
+        "btn_run": "실행 (주입)",
+        "btn_info": "정보",
+        "btn_donate": "기부",
+        "ready": "준비 완료",
+        "msg_done": "완료!",
+        "msg_success": "성공!\niPhone 월렛을 확인하세요.",
+        "err_no_card_folder": "Cards 폴더를 찾을 수 없습니다!",
+        "err_no_connect": "장치가 연결되지 않았습니다.",
+        "confirm_del": "정말 삭제하시겠습니까?",
+        "p_init": "연결 초기화 중...",
+        "p_img": "배경 교체 중...",
+        "p_front": "FrontFace 설치 중...",
+        "p_holder": "PlaceHolder 설치 중...",
+        "p_preview": "미리보기 설치 중...",
+        "p_respring": "리스프링 중 (Respring)...",
+        "p_done": "프로세스 완료!",
+        "info_title": "프로젝트 정보",
+        "uuid_title": "도서 다운로드 필요",
+        "uuid_msg": "Books UUID가 없습니다.\n\n👉 iPhone에서 '도서'(Books) 앱을 열고 아무 책이나 다운로드하십시오.\n\n감지되면 도구가 자동으로 계속됩니다.",
+        "cred_dev": "개발자",
+        "cred_log": "Wallet ID 로그 익스플로잇",
+        "cred_sbx": "bl_sbx 익스플로잇"
+    },
 }
 
 class InjectorProcess(QThread):
@@ -277,7 +317,7 @@ class AppWindow(QMainWindow):
         
         self.user_image_path = ""
         self.udid = ""
-        self.current_lang = "FR"
+        self.current_lang = "EN"
         
         self.init_ui()
         self.apply_dark_theme()
@@ -304,7 +344,8 @@ class AppWindow(QMainWindow):
         self.lbl_title.setObjectName("AppTitle")
         
         self.combo_lang = QComboBox()
-        self.combo_lang.addItems(["Français","Tiếng Việt", "English", "中文"])
+	self.combo_lang = QComboBox()
+        self.combo_lang.addItems(["English", "Français", "Tiếng Việt", "中文", "한국어"])
         self.combo_lang.setFixedWidth(100)
         self.combo_lang.currentIndexChanged.connect(self.change_language)
         

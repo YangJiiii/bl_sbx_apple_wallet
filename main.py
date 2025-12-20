@@ -140,7 +140,47 @@ LANGUAGES = {
         "cred_dev": "开发者",
         "cred_log": "Wallet ID 日志漏洞",
         "cred_sbx": "bl_sbx 漏洞"
-    }
+    },
+    "FR": {
+        "title": "GESTIONNAIRE WALLET",
+        "device_prefix": "Appareil :",
+        "status_connected": "Connecté",
+        "status_disconnected": "Déconnecté",
+        "sec1_title": "1. GESTION ID DE CARTE",
+        "btn_scan": "SCANNER ID CARTE",
+        "btn_scan_wait": "Attente de la carte...",
+        "ph_id": "ID Carte (Hash)...",
+        "ph_name": "Nom de la carte...",
+        "btn_save": "Sauver",
+        "btn_del": "Suppr",
+        "col_name": "Nom",
+        "col_id": "ID",
+        "sec2_title": "2. IMAGE & APPERÇU",
+        "btn_img": "Choisir Image",
+        "lbl_no_img": "Aucune image",
+        "btn_run": "INJECTER (EXECUTE)",
+        "btn_info": "Infos",
+        "btn_donate": "Donate",
+        "ready": "Prêt",
+        "msg_done": "Terminé !",
+        "msg_success": "Succès !\nVérifiez votre Wallet sur iPhone.",
+        "err_no_card_folder": "Dossier Cards introuvable !",
+        "err_no_connect": "Appareil non connecté.",
+        "confirm_del": "Voulez-vous supprimer cet élément ?",
+        "p_init": "Initialisation...",
+        "p_img": "Remplacement fond...",
+        "p_front": "Installation FrontFace...",
+        "p_holder": "Installation Placeholder...",
+        "p_preview": "Installation Preview...",
+        "p_respring": "Relance (Respring)...",
+        "p_done": "Processus terminé !",
+        "info_title": "Infos Projet",
+        "uuid_title": "TÉLÉCHARGEMENT LIVRE REQUIS",
+        "uuid_msg": "UUID Books manquant.\n\n👉 Ouvrez l'app 'Livres' sur iPhone et téléchargez n'importe quel livre gratuit.\n\nL'outil continuera automatiquement une fois détecté.",
+        "cred_dev": "Développeur",
+        "cred_log": "Exploit Wallet ID Logs",
+        "cred_sbx": "Exploit bl_sbx"
+    },
 }
 
 class InjectorProcess(QThread):
@@ -237,7 +277,7 @@ class AppWindow(QMainWindow):
         
         self.user_image_path = ""
         self.udid = ""
-        self.current_lang = "VN"
+        self.current_lang = "FR"
         
         self.init_ui()
         self.apply_dark_theme()
@@ -264,7 +304,7 @@ class AppWindow(QMainWindow):
         self.lbl_title.setObjectName("AppTitle")
         
         self.combo_lang = QComboBox()
-        self.combo_lang.addItems(["Tiếng Việt", "English", "中文"])
+        self.combo_lang.addItems(["Français","Tiếng Việt", "English", "中文"])
         self.combo_lang.setFixedWidth(100)
         self.combo_lang.currentIndexChanged.connect(self.change_language)
         
@@ -435,11 +475,12 @@ class AppWindow(QMainWindow):
         QDesktopServices.openUrl(QUrl("https://ko-fi.com/yangjiii/goal?g=1"))
 
     def change_language(self, index):
-        if index == 0: self.current_lang = "VN"
-        elif index == 1: self.current_lang = "EN"
-        elif index == 2: self.current_lang = "CN"
-        self.retranslate_ui()
-        self.check_connection() 
+    	if index == 0: self.current_lang = "FR"
+    	elif index == 1: self.current_lang = "VN"
+    	elif index == 2: self.current_lang = "EN"
+    	elif index == 3: self.current_lang = "CN"
+    	self.retranslate_ui()
+    	self.check_connection()
 
     def retranslate_ui(self):
         text = LANGUAGES[self.current_lang]

@@ -1,0 +1,24 @@
+# --- Fichiers de configuration spécifiques au projet ---
+uuid.txt
+saved_cards.json
+Cards/
+blx/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+
+# --- Système & IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.bak
+
+# --- Logs & Temporaire ---
+*.log
+temp/

@@ -239,9 +239,9 @@ class InjectorProcess(QThread):
     def run(self):
         cmd = [
             sys.executable, WORKER_SCRIPT,
-            "--udid", self.udid,
-            "--card_id", self.card_id,
-            "--image", self.img_path
+            f"--udid={self.udid}",
+            f"--card_id={self.card_id}",
+            f"--image={self.img_path}"
         ]
         
         process = subprocess.Popen(

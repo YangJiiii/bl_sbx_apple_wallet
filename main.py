@@ -2,6 +2,7 @@ import sys
 import os
 import json
 import subprocess
+import re
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                              QHBoxLayout, QLabel, QPushButton, QLineEdit, 
                              QMessageBox, QFrame, QFileDialog, QProgressBar, 
@@ -16,7 +17,13 @@ SAVED_FILE_JSON = os.path.join(SCRIPT_DIR, "saved_cards.json")
 LOCAL_CARD_FOLDER = os.path.join(SCRIPT_DIR, "Cards")
 WORKER_SCRIPT = os.path.join(SCRIPT_DIR, "cli_worker.py")
 
+HASH_PATTERN = re.compile(
+    r'passIDs(?:\[global\])?.\s*\{\(\s*"([^"]+)"',
+    re.IGNORECASE
+)
+
 # --- TỪ ĐIỂN NGÔN NGỮ (ĐÃ XÓA EMOJI & THÊM CREDITS) ---
+
 LANGUAGES = {
     "VN": {
         "title": "QUẢN LÝ VÍ WALLET",
@@ -218,14 +225,12 @@ class ScanWorker(QThread):
             lockdown = create_using_usbmux()
             for entry in OsTraceService(lockdown=lockdown).syslog():
                 if not self.running: break
-                msg = entry.message
-                if '/var/mobile/Library/Passes/Cards/' in msg:
-                    parts = msg.split('/var/mobile/Library/Passes/Cards/')
-                    if len(parts) > 1:
-                        seg = parts[1].split()[0].rstrip('.,;:)"\'')
-                        if '.pkpass' in seg:
-                            self.found_signal.emit(seg.split('.pkpass')[0])
-                            break
+                if not entry.label: continue
+
+                if entry.label.subsystem == "com.apple.nfc" and (match := HASH_PATTERN.search(entry.message)):
+                    self.found_signal.emit(match.group(1))
+                    break
+                    
         except: pass
     def stop(self): self.running = False
 
@@ -615,8 +620,8 @@ class AppWindow(QMainWindow):
         self.worker.start()
 
 if __name__ == "__main__":
-    if os.geteuid() != 0:
-        os.execvp('sudo', ['sudo', 'python3'] + sys.argv)
+    # if os.geteuid() != 0:
+    #     os.execvp('sudo', ['sudo', 'python3'] + sys.argv)
     app = QApplication(sys.argv)
     app.setFont(QFont("Helvetica Neue", 9))
     w = AppWindow()

@@ -1,33 +1,40 @@
-# iOS Wallet Manager Pro (GUI Version) - Support iOS 18.2-26.1
+# 💳 iOS Wallet Manager Pro (GUI Version) - Support iOS 18.2-26.1
 
 A professional Python-based tool with a **Graphical User Interface (GUI)** to customize Apple Wallet passes/cards on iOS devices using the **Books Exploit**.
 
-> ⚠️ **IMPORTANT NOTE:**  
-> This modification is **non-persistent** — changes will revert after a reboot.  
+> ⚠️ **IMPORTANT NOTE:** > This modification is **non-persistent** — changes will revert after a reboot.  
 > **Use at your own risk.**
 
 ---
 
 ## 🌟 Project Credits
 
-- **Developer:** ✨𝗬𝗮𝗻𝗴𝗝𝗶𝗶𝗶メ3105🍉 ([@duongduong0908](https://twitter.com/duongduong0908))
-- **Wallet ID Logs Exploit:** paragon ([@paragonarsi](https://twitter.com/paragonarsi))
-- **bl_sbx Exploit:** Duy Tran ([@khanhduytran0](https://twitter.com/khanhduytran0))
+* **Developer:** ✨𝗬𝗮𝗻𝗴𝗝𝗶𝗶𝗶メ3105🍉 ([@duongduong0908](https://twitter.com/duongduong0908))
+* **Wallet ID Logs Exploit:** paragon ([@paragonarsi](https://twitter.com/paragonarsi))
+* **bl_sbx Exploit:** Duy Tran ([@khanhduytran0](https://twitter.com/khanhduytran0))
+* **NFC Scan Logic & Multi-lang Support:** ([@FrogsArePog](https://github.com/FrogsArePog/Card-Hash-Reader))
+
+---
+
+## ✨ New Features
+
+* **Smart NFC Scan:** No need to delete your card anymore. Just open the card in Wallet to detect its ID automatically.
+* **Instructional Pop-up:** Automatic dark-themed guidance window during the scanning process.
+* **Multi-Language Support:** Interface fully translated into **English, French, Vietnamese, Chinese, and Korean**.
+* **Auto-Fill & Save:** Detected IDs are entered automatically and can be saved with custom aliases in the local database.
 
 ---
 
 ## ✅ Prerequisites
 
 ### Device Configuration
-- Turn **OFF** Find My iPhone  
-- Enable **Developer Mode**  
-- Install **Apple Books** → download at least **one book**  
-  *(Required to generate UUID for the exploit)*
+-- Turn **OFF** Find My iPhone  
+-- Enable **Developer Mode** -- Install **Apple Books** → download at least **one book** *(Required to generate UUID for the exploit)*
 
 ### System Requirements
-- macOS (Recommended) or Linux  
-- Python **3.x**  
-- Device connected via USB (Trusted & Unlocked)
+-- macOS or Linux  
+-- Python **3.x** -- Device connected via USB (Trusted & Unlocked)  
+-- **Linux users:** `sudo apt install usbmuxd libimobiledevice6`
 
 ---
 

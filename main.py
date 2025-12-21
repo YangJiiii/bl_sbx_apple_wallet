@@ -620,8 +620,8 @@ class AppWindow(QMainWindow):
         self.worker.start()
 
 if __name__ == "__main__":
-    # if os.geteuid() != 0:
-    #     os.execvp('sudo', ['sudo', 'python3'] + sys.argv)
+    if os.geteuid() != 0:
+        os.execvp('sudo', ['sudo', 'python3'] + sys.argv)
     app = QApplication(sys.argv)
     app.setFont(QFont("Helvetica Neue", 9))
     w = AppWindow()

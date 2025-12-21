@@ -14,7 +14,7 @@ A professional Python-based tool with a **Graphical User Interface (GUI)** to cu
 - **Developer:** ✨𝗬𝗮𝗻𝗴𝗝𝗶𝗶𝗶メ3105🍉 ([@duongduong0908](https://twitter.com/duongduong0908))
 - **Wallet ID Logs Exploit:** paragon ([@paragonarsi](https://twitter.com/paragonarsi))
 - **bl_sbx Exploit:** Duy Tran ([@khanhduytran0](https://twitter.com/khanhduytran0))
-* **NFC Scan Logic & Multi-lang Support:** ([@FrogsArePog](https://github.com/FrogsArePog/Card-Hash-Reader))
+- **NFC Scan Logic & Multi-lang Support:** ([@FrogsArePog](https://github.com/FrogsArePog/Card-Hash-Reader))
 ---
 
 ## ✅ Prerequisites

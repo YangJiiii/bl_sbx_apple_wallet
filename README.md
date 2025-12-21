@@ -60,20 +60,21 @@ python3 path/to/main.py
 
 ## 🖥️ On the Interface
 
-### **Step 1 — Scan ID**
-- Remove the card from Apple Wallet if already added  
-- Click **SCAN CARD ID**  
-- Add the card to your Wallet  
-- Then set your card as the **Default card** 
+### **Step 1 — Smart Scan**
+* Click **SCAN CARD ID**.
+* On your iPhone: **Open the Wallet app and simply tap the card** you want to modify.
+* The tool will detect the Card ID automatically and close the instruction window.
 
-### **Step 2 — Save**
-Save the detected Card ID with a custom alias for later use.
+### **Step 2 — Save & Manage**
+* Enter an alias name in the text field and click **Save** to store the ID in your local database.
+* You can click on any card in the table to quickly reload its ID for future modifications.
 
 ### **Step 3 — Select Image**
-Choose a custom **PNG** or **JPG** background image.
+* Click **Select Image** or **Drag & Drop** a PNG or JPG file directly onto the preview area.
 
 ### **Step 4 — Execute**
-Click **EXECUTE (INJECT)** to begin the modification process.
+* Click **EXECUTE (INJECT)** to start the injection process.
+* The tool will verify your iOS version compatibility before proceeding.
 
 ---
 

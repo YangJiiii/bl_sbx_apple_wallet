@@ -11,7 +11,7 @@ A professional Python-based tool with a **Graphical User Interface (GUI)** to cu
 ## 🌟 Project Credits
 
 - **Developer:** ✨𝗬𝗮𝗻𝗴𝗝𝗶𝗶𝗶メ3105🍉 ([@duongduong0908](https://twitter.com/duongduong0908))
-- **Wallet ID Logs Exploit:** paragon ([@paragonarsi](https://twitter.com/paragonarsi))
+- **Wallet ID Logs Exploit:** Frog ([@FrogsArePog](https://github.com/FrogsArePog))
 - **bl_sbx Exploit:** Duy Tran ([@khanhduytran0](https://twitter.com/khanhduytran0))
 
 ---
@@ -60,10 +60,9 @@ python3 path/to/main.py
 ## 🖥️ On the Interface
 
 ### **Step 1 — Scan ID**
-- Remove the card from Apple Wallet if already added  
 - Click **SCAN CARD ID**  
-- Add the card to your Wallet  
-- Then set your card as the **Default card** 
+- Open Wallet App  
+- Then click on your card 
 
 ### **Step 2 — Save**
 Save the detected Card ID with a custom alias for later use.
